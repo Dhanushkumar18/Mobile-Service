@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <metacharset="ISO-8859-1">
+	<title>Dsquare Mobiles</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<style>
+		.billboard.light{
+    		background: url("{{url_for('static',filename='images/deleivery1.PNG')}}") no-repeat;  
+    		background-size:100% 150vh; 
+    		height:150vh;
+        text-align: center;
+    		  
+   		}
+   		#box{
+   			width:100px;
+   			height:100px;
+   		}
+   		@keyframes scrolltop{
+   			0%{
+   				margin-top:500px;
+   				opacity:0;
+   			}
+   			25%{
+   				margin-top:375px;
+   				opacity:0.25;
+   			}
+   			50%{
+   				margin-top:250px;
+   				opacity:0.5;
+   			}
+   			75%{
+   				margin-top:125px;
+   				opacity:0.75;
+   			}
+   			100%{
+   				margin-top:0px;
+   				opacity:1;
+   			}
+   		}
+       th{
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        color:blue;
+      }
+      
+</style>
+</head>
+<body style="overflow: hidden;" background="do.jpg">
+         <a href="./project1.html"><button type="button" class="btn btn-primary">Home</button></a>
+        <a href="./repair.html"><button type="button" class="btn btn-success">Repair</button></a>
+        <a href="./location.html"><button type="button" class="btn btn-info">Location</button></a>
+        <a href="./contact.html"><button type="button" class="btn btn-danger">Contact US</button></a><br><br><br><br><br>
+                 
+
+         <form name='form' method='POST' action='/thankyou'>
+  			 <table align="center" cellspacing="10" cellpadding="10" id='ta'>
+
+  			 	<tr>
+  			 		<th><font color="red">Name</font></th>
+  			 		<th><input type="text" name="name"></th>
+  			 	</tr>
+  			 	<tr>
+  			 	<th><font color="red">Email</font></th>
+  			 	<th><input type="text" name="email"></th>
+  			 	</tr>
+  			 	<tr>
+  			 	<th><font color="red">PhoneNumber</font></th>
+  			 	<th><input type="text" name="PhoneNumber"></th>	
+  			 	</tr>
+  			 	<tr>
+  			 	<th><font color="red">Address</font></th>
+  			 	<th><textarea name="Address"></textarea></th>
+  			 	</tr>
+  			 	<tr>
+  			 	<th><font color="red">Pincode</font></th>
+  			 	<th><input type="text" name="pincode"></th>
+  			 	</tr>	
+  			 	<tr>
+  			 		<th><a href="/thankyou"><input type="submit" value="submit"></a></th>
+  			 		<th><input type="reset" value="reset"></th>	
+          </tr>
+          </form>
+          </table>
+          
+  			</section>
+  			<script type="text/javascript">
+  				let v=document.getElementById('ta');
+  				v.style.marginTop="500px";
+  				v.style.animation="scrolltop 4s ease-in";
+  				t=setTimeout(()=>{
+  					v.style.marginTop=0;
+  				},4000);
+  			</script>
+</body>
+</html>

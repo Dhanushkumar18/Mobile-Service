@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <metacharset="ISO-8859-1">
+<title>Repair Mobile</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<style>
+    .billboard.light{
+        background: url("{{url_for('static',filename='images/menu3.jpg')}}") no-repeat;  
+        background-size:100% 200vh; 
+        height:200vh;
+        text-align: center;
+          
+      }
+      th{
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        color: blue;
+      }
+      @keyframes scrolltop{
+        0%{
+          margin-top:500px;
+          opacity:0;
+        }
+        25%{
+          margin-top:375px;
+          opacity:0.25;
+        }
+        50%{
+          margin-top:250px;
+          opacity:0.5;
+        }
+        75%{
+          margin-top:125px;
+          opacity:0.75;
+        }
+        100%{
+          margin-top:0px;
+          opacity:1;
+        }
+      }
+      
+</style>
+</head>
+<body background="d.jpg ">
+
+  <section class="billboard light">
+      <a href="./project1.html"><button type="button" class="btn btn-primary">Home</button></a>
+        <a href="./repair.html"><button type="button" class="btn btn-success">Repair</button></a>
+        <a href="./location.html"><button type="button" class="btn btn-info">Location</button></a>
+        <a href="./contact.html"><button type="button" class="btn btn-danger">Contact US</button></a><br><br><br><br><br>
+       <h1 style="color: black">Mobiles Repair</h1>
+       <form name='form' method='POST'>
+       <table align="center" id='ta'>
+         <tr>
+
+          <th colspan="2">No Of Service</th>
+          <th>Quantity</th>
+          <th>Service amount</th>
+        </tr>
+        <tr>
+           
+          <th>Samsung</th>
+          <th><input type="number" name= "samsung"></th>
+          <th>2500</th>
+        </tr>   
+        <tr>
+  
+          <th>Vivo</th>
+          <th><input type="number" name="vivo"></th>
+          <th>3000</th>
+        </tr>
+        <tr>
+          
+          <th>Iphone</th>
+         <th><input type="number" name="Iphone"></th>
+          <th>10000</th>
+        </tr>
+        <tr>
+         
+          <th>oppo</th>
+          <th><input type="number" name="oppo"></th>
+          <th>2300</th>
+        </tr>
+        <tr>
+          
+          <th>redmi</th>
+          <th><input type="number" name="redmi"></th>
+          <th>300</th>
+        </tr>
+        <tr>
+          
+          <th>lenovo</th>
+          <th><input type="number" name="lenovo"></th>
+          <th>600</th>
+        </tr>
+        
+        <th></th>
+        <th><a href="./location.html"><b><h4><input type="button" class="btn btn-danger" name="confirm" value='confirm' onclick="calculate();"></a></th></tr>
+       </form>
+       </table>
+     
+      </section>
+      <script type="text/javascript">
+        function calculate() {
+          let v=0;
+          v+=+document.form.samsung.value*2500
+          v+=+document.form.vivo.value*3000
+          v+=+document.form.oppo.value*2300
+          v+=+document.form.redmi.value*300
+          v+=+document.form.Iphone.value*10000
+          v+=+document.form.lenovo.value*600
+          alert(v);
+          alert("Thankyou visit again"); 
+        }
+        let val=document.getElementById('ta');
+          val.style.marginTop="500px";
+          val.style.animation="scrolltop 4s ease-in";
+          t=setTimeout(()=>{
+            val.style.marginTop=0;
+          },4000);
+      </script>
+</body>
+</html>     
